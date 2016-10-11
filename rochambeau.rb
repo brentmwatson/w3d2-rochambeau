@@ -1,15 +1,22 @@
 class Game
   attr_accessor :player_one_choice, :computer
 
-  def initialize (player_one_choice)
-    player_one_choice = playerOneChoice
+  def play
+    promp_player
+    player_choice
+    computer_choice
+    ramdom_pick
+    choose_winner
+    declare_winner
+    ask_for_rematch
+  end
 
   def promp_player
     puts "Lets play rock, paper, scissors."
     puts "Pick a selection:"
     puts "Rock or Paper or Scissors"
     puts "-------------------------------"
-    gets playerOneChoice
+    gets player_one_choice
   end
 
   def player_choice
@@ -37,6 +44,10 @@ class Game
 
   def declare_winner
     # "Player: ROCK vs Computer: SCISSORS ----- PLAYER WINS"
+
+  end
+
+  def ask_for_rematch
 
   end
 
