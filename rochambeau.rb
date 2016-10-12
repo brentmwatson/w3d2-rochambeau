@@ -5,7 +5,7 @@ class Game
     promp_player
     # player_choice
     computer_choice
-    ramdom_pick
+    random_pick
     choose_winner
     declare_winner
     ask_for_rematch
@@ -64,7 +64,7 @@ class Game
 
 
   def declare_winner
-    puts "Player: " player_one_choice.upcase " vs Computer: " choose_winner.upcase
+    # puts "Player: " player_one_choice.upcase " vs Computer: " choose_winner.upcase
     puts "choose_winner"
   end
 
