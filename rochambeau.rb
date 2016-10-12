@@ -3,12 +3,12 @@ class Game
 
   def play
     promp_player
-    player_choice
+    # player_choice
     computer_choice
-    ramdom_pick
-    choose_winner
-    declare_winner
-    ask_for_rematch
+    # ramdom_pick
+    # choose_winner
+    # declare_winner
+    # ask_for_rematch
   end
 
   def promp_player
@@ -16,40 +16,55 @@ class Game
     puts "Pick a selection:"
     puts "Rock or Paper or Scissors"
     puts "-------------------------------"
-    gets player_one_choice
+    self.player_one_choice = gets.chomp.downcase
   end
 
-  def player_choice
-    # validate the player_choice
-      # for playerOneChoice
-        %w(rock paper scissors) == ["rock", "paper", "scissors"]
-  end
 
+
+  # def player_choice
+  #   # validate the player_choice
+  #
+  #   if player_one_choice != rock || paper || scissors
+  #     for playerOneChoice do |x|
+  #       x.%w(rock paper scissors) == ["rock", "paper", "scissors"]
+  #
+  #   else puts "Do you understand how this game works?"
+  #         puts"Please choose one: Rock Paper or Scissor"
+  # end
+  #
   def computer_choice
-    # call random_pick
+    random_pick
   end
 
-  def ramdom_pick
-    # selection = %w(rock paper scissors).sample
+  def random_pick
+    self.computer = %w(rock paper scissors).sample
   end
-
+  #
   def choose_winner
-    #comparitive loop
 
-    # Rock beats scissors
-    # Paper beats Rock
-    # Scissors beats Paper
-
-  end
-
-  def declare_winner
-    # "Player: ROCK vs Computer: SCISSORS ----- PLAYER WINS"
-
-  end
-
-  def ask_for_rematch
+    case
+      when
+        ["rock", "scissors"]
+        ["paper", "rock"]
+        ["scissors", "paper"]
+        puts "player wins"
+      when
+        ["rock", "rock"]
+        ["paper", "paper"]
+        ["scissors", "scissors"]
+        puts "you draw"
 
   end
+  #
+  # def declare_winner
+  #   puts "Player: "(player_one_choice.upcase " vs " Computer: "(choose_winner.upcase
+  #   puts "choose_winner"
+  #
+  # end
+  #
+  # def ask_for_rematch
+  #
+  # end
 
 end
 
