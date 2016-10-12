@@ -5,10 +5,10 @@ class Game
     promp_player
     # player_choice
     computer_choice
-    # ramdom_pick
-    # choose_winner
-    # declare_winner
-    # ask_for_rematch
+    ramdom_pick
+    choose_winner
+    declare_winner
+    ask_for_rematch
   end
 
   def promp_player
@@ -23,13 +23,13 @@ class Game
 
   # def player_choice
   #   # validate the player_choice
-  #
   #   if player_one_choice != rock || paper || scissors
   #     for playerOneChoice do |x|
   #       x.%w(rock paper scissors) == ["rock", "paper", "scissors"]
   #
   #   else puts "Do you understand how this game works?"
   #         puts"Please choose one: Rock Paper or Scissor"
+  #   end
   # end
 
 
@@ -64,14 +64,13 @@ class Game
 
 
   def declare_winner
-    puts "Player: "(player_one_choice.upcase " vs Computer: " choose_winner.upcase
+    puts "Player: " player_one_choice.upcase " vs Computer: " choose_winner.upcase
     puts "choose_winner"
-  # => 
-  # end
-  #
-  # def ask_for_rematch
-  #
-  # end
+  end
+
+  def ask_for_rematch
+
+  end
 
 end
 
