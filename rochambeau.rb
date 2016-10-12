@@ -31,18 +31,21 @@ class Game
   #   else puts "Do you understand how this game works?"
   #         puts"Please choose one: Rock Paper or Scissor"
   # end
-  #
+
+
   def computer_choice
     random_pick
   end
 
+
   def random_pick
     self.computer = %w(rock paper scissors).sample
   end
-  #
+
+
   def choose_winner
 
-    case
+    case[player_one_choice, self.computer]
       when
         ["rock", "scissors"]
         ["paper", "rock"]
@@ -53,13 +56,17 @@ class Game
         ["paper", "paper"]
         ["scissors", "scissors"]
         puts "you draw"
+      else
+        puts "computer wins"
+    end
 
   end
-  #
-  # def declare_winner
-  #   puts "Player: "(player_one_choice.upcase " vs " Computer: "(choose_winner.upcase
-  #   puts "choose_winner"
-  #
+
+
+  def declare_winner
+    puts "Player: "(player_one_choice.upcase " vs Computer: " choose_winner.upcase
+    puts "choose_winner"
+  # => 
   # end
   #
   # def ask_for_rematch
